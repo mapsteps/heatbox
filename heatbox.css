@@ -471,6 +471,10 @@
 	border: 1px solid #ddd;
 	border-radius: 3px;
 	cursor: pointer;
+
+	&:hover {
+		background-color: #f8f8f8;
+	}
 }
 
 /* Tooltip */
