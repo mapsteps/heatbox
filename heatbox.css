@@ -418,20 +418,20 @@
 }
 
 /* Toggle switch */
-.heatbox .toggle-switch {
+.heatbox-wrap .toggle-switch {
 	position: relative;
 	display: inline-block;
 	width: 36px;
 	height: 20px;
 }
 
-.heatbox .toggle-switch input {
+.heatbox-wrap .toggle-switch input {
 	opacity: 0;
 	width: 0;
 	height: 0;
 }
 
-.heatbox .toggle-switch .switch-track {
+.heatbox-wrap .toggle-switch .switch-track {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -443,7 +443,7 @@
 	transition: background-color 0.3s;
 }
 
-.heatbox .switch-thumb {
+.heatbox-wrap .switch-thumb {
 	position: absolute;
 	top: 2px;
 	left: 2px;
@@ -454,11 +454,11 @@
 	transition: transform 0.3s;
 }
 
-.heatbox .toggle-switch input:checked + .switch-track {
+.heatbox-wrap .toggle-switch input:checked + .switch-track {
 	background-color: #5bcb86;
 }
 
-.heatbox .toggle-switch input:checked + .switch-track .switch-thumb {
+.heatbox-wrap .toggle-switch input:checked + .switch-track .switch-thumb {
 	transform: translateX(16px);
 }
 
