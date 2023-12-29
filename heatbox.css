@@ -382,6 +382,7 @@
 	display: block;
 }
 
+.heatbox .radio-label,
 .heatbox .checkbox-label {
 	padding-left: 30px;
 }
