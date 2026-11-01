@@ -1,0 +1,1023 @@
+/* Init */
+.heatbox-wrap,
+.heatbox-wrap * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.heatbox-admin.has-header .update-nag {
+	display: none;
+}
+
+.heatbox-admin.has-header #wpcontent {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.heatbox-admin.has-header .wrap {
+	margin: 0;
+}
+
+/* Tab navigation */
+.heatbox-tab-nav {
+	padding: 20px 0;
+	margin: 10px 0 0 0;
+}
+
+.heatbox-tab-nav li {
+	display: inline-flex;
+	padding: 10px 30px 10px 0;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.heatbox-tab-nav li a {
+	color: #23282d;
+	text-decoration: none;
+}
+
+.heatbox-tab-nav li.active a {
+	color: var(--wp-admin-theme-color, #3858e9);
+}
+
+/* Divider */
+.heatbox-divider {
+	width: 100%;
+	height: 1px;
+	margin: 40px 0;
+	background: #ccc;
+}
+
+@media screen and (max-width: 991px) {
+	.heatbox-divider {
+		margin: 20px 0;
+	}
+}
+
+/* Container */
+.heatbox-container {
+	max-width: 1200px;
+	padding: 0 20px;
+}
+
+.heatbox-container-wide {
+	max-width: 1400px;
+}
+
+.heatbox-container-center {
+	margin: 0 auto;
+}
+
+/* Header */
+.heatbox-header {
+	background: #fff;
+	padding-top: 24px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.heatbox-header.heatbox-has-tab-nav .logo-container {
+	margin-bottom: 0;
+}
+
+.heatbox-header .logo-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.heatbox-header .logo-container > div {
+	width: auto;
+}
+
+.heatbox-header .logo-container .heatbox-logo-wide img {
+	width: 180px;
+}
+
+.heatbox-header .logo-container img {
+	display: block;
+	width: 44px;
+	height: auto;
+	float: none;
+}
+
+.heatbox-header .tab-navigation {
+	margin: -20px 0 20px 0;
+	padding: 0;
+}
+
+.heatbox-header .tab-navigation li {
+	display: inline-flex;
+	padding: 10px 30px 10px 0;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.heatbox-header .tab-navigation li a {
+	color: #23282d;
+	text-decoration: none;
+}
+
+.heatbox-header .tab-navigation li.active a {
+	color: var(--wp-admin-theme-color, #3858e9);
+}
+
+/* Title */
+.heatbox-wrap .title {
+	margin: 0;
+	padding: 0;
+	color: #1e1e1e;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.heatbox-wrap .subtitle {
+	margin: 4px 0 0 0;
+	padding: 0;
+	color: #646970;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+/* Version */
+.heatbox-wrap .version {
+	font-size: 12px;
+	font-weight: 500;
+	color: #646970;
+	background: #f0f0f1;
+	border-radius: 20px;
+	padding: 2px 8px;
+	line-height: 1.5;
+	vertical-align: middle;
+	margin: 0 5px;
+}
+
+/* 2 Column Layout - Wrapper */
+.heatbox-column-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* 2 Column Layout - Main Content */
+.heatbox-main {
+	width: 73%;
+	margin-right: 2%;
+}
+
+/* 2 Column Layout - Sidebar */
+.heatbox-sidebar {
+	width: 25%;
+}
+
+/* 2 Column Layout - Responsiveness */
+@media screen and (max-width: 991px) {
+	.heatbox-main,
+	.heatbox-sidebar {
+		width: 100%;
+	}
+
+	.heatbox-main {
+		margin-right: 0;
+	}
+}
+
+/* Panels */
+.heatbox-admin-panel {
+	display: none;
+}
+
+/* Heatbox */
+.heatbox {
+	background: #fff;
+	margin-bottom: 20px;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+}
+
+.heatbox h2 {
+	border-bottom: 1px solid #f0f0f1;
+	margin: 0;
+	padding: 16px 20px;
+	font-size: 15px;
+}
+
+.heatbox.is-grouped h2 {
+	border-top: 1px solid #ddd;
+}
+
+.heatbox.is-grouped h2:first-child {
+	border-top: none;
+}
+
+.heatbox h3 {
+	margin: 0 0 10px 0;
+}
+
+.heatbox p {
+	margin: 0 0 20px 0;
+}
+
+.heatbox-content {
+	margin: 0;
+	padding: 20px;
+}
+
+.heatbox-content p:first-child {
+	margin-top: 0;
+}
+
+/* Margins */
+.heatbox-margin-top {
+	margin-top: 20px;
+}
+
+.heatbox-margin-bottom {
+	margin-bottom: 20px;
+}
+
+/* Paddings */
+.heatbox-margin-top {
+	margin-top: 20px;
+}
+
+.heatbox-margin-bottom {
+	margin-bottom: 20px;
+}
+
+/* Loading Button */
+@-webkit-keyframes heatboxLoadingSpinner {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes heatboxLoadingSpinner {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+/* Buttons */
+.heatbox-wrap .button-larger {
+	padding: 5px 20px;
+}
+
+.heatbox-wrap .button-full {
+	width: 100%;
+	text-align: center;
+}
+
+.heatbox-wrap .button.is-loading {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: transparent !important;
+	pointer-events: none;
+}
+
+.heatbox-wrap .button.is-loading::after {
+	content: "";
+	position: absolute;
+	width: 1em;
+	display: block;
+	height: 1em;
+	border: 2px solid #dbdbdb;
+	/* border: 2px solid $accent-color; */
+	border-color: transparent transparent #fff #fff !important;
+	/* border-color: transparent transparent $accent-color $accent-color !important; */
+	border-radius: 290486px;
+	-webkit-animation: heatboxLoadingSpinner 0.5s infinite linear;
+	animation: heatboxLoadingSpinner 0.5s infinite linear;
+}
+
+/* Settings */
+.heatbox .form-table {
+	margin: 0;
+}
+
+.heatbox .form-table th,
+.heatbox .form-table td {
+	padding: 20px;
+	vertical-align: top;
+}
+
+.heatbox .form-table th .description {
+	margin-top: 10px;
+}
+
+.heatbox .setting-fields {
+}
+
+.heatbox .setting-fields .setting-field {
+	margin-bottom: 7px;
+}
+
+.heatbox .setting-fields .setting-field:last-of-type {
+	margin-bottom: 0;
+}
+
+/* Submit button */
+.heatbox-wrap p.submit {
+	margin: 20px 0;
+	padding: 0;
+}
+
+/**
+ * Checkboxes & Radio Buttons
+ * Copied & modified from https://codepen.io/KenanYusuf/pen/PZKEKd/
+ */
+.heatbox .label {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.heatbox .radio-label {
+	padding-left: 30px;
+	margin-right: 25px;
+}
+
+.heatbox .label input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.heatbox .label .indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #e6e6e6;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.heatbox .radio-label .indicator {
+	border-radius: 50%;
+}
+
+.heatbox .label:hover input ~ .indicator,
+.heatbox .label input:focus ~ .indicator {
+	background-color: #ccc;
+}
+
+.heatbox .label input:checked ~ .indicator {
+	background-color: var(--wp-admin-theme-color, #3858e9);
+}
+
+.heatbox .label:hover input:not([disabled]):checked ~ .indicator,
+.heatbox .label input:checked:focus ~ .indicator {
+	background-color: var(--wp-admin-theme-color-darker-10, #2c448f);
+}
+
+.heatbox .label input:disabled ~ .indicator {
+	background-color: #e6e6e6;
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.heatbox .label .indicator::after {
+	display: none;
+	position: absolute;
+	content: "";
+}
+
+.heatbox .label input:checked ~ .indicator::after {
+	display: block;
+}
+
+.heatbox .radio-label,
+.heatbox .checkbox-label {
+	padding-left: 30px;
+}
+
+.heatbox .checkbox-label .indicator::after {
+	left: 8px;
+	top: 4px;
+	width: 3px;
+	height: 8px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.heatbox .checkbox-label input:disabled ~ .indicator::after {
+	border-color: #7b7b7b;
+}
+
+.heatbox .radio-label .indicator::after {
+	left: 7px;
+	top: 7px;
+	height: 6px;
+	width: 6px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.heatbox .radio-label input:disabled ~ .indicator::after {
+	background-color: #7b7b7b;
+}
+
+/* Call to action */
+.heatbox-cta-container.is-attached {
+	padding: 20px;
+	background: #fff;
+	margin-top: -20px;
+	margin-bottom: 20px;
+	border: 1px solid #e0e0e0;
+	border-top: none;
+	border-radius: 0 0 8px 8px;
+}
+
+.heatbox:has(+ .heatbox-cta-container.is-attached) {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.heatbox-cta {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	font-weight: 700;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	background: #fff;
+}
+
+.heatbox-cta > * {
+	margin: 0 !important;
+}
+
+.heatbox-cta .button {
+	padding: 5px 15px !important;
+}
+
+.heatbox-cta.primary {
+	background: color-mix(in srgb, var(--wp-admin-theme-color, #3858e9) 8%, #fff);
+	color: #1e1e1e;
+	font-weight: 400;
+	border: none;
+}
+
+.heatbox-cta.secondary {
+	background: #f6f7f7;
+	font-weight: 400;
+}
+
+.heatbox-cta.primary .button {
+	font-weight: 600;
+}
+
+/* Toggle switch */
+.heatbox-wrap .toggle-switch {
+	position: relative;
+	display: inline-block;
+	width: 36px;
+	height: 20px;
+}
+
+.heatbox-wrap .toggle-switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.heatbox-wrap .toggle-switch .switch-track {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.heatbox-wrap .switch-thumb {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: transform 0.3s;
+}
+
+.heatbox-wrap .toggle-switch input:checked + .switch-track {
+	background-color: #5bcb86;
+}
+
+.heatbox-wrap .toggle-switch input:checked + .switch-track .switch-thumb {
+	transform: translateX(16px);
+}
+
+/* Tags / chips */
+.tags-heatbox .action-status {
+	height: auto;
+}
+
+.tags-heatbox .tags-wrapper {
+	line-height: 1.8;
+}
+
+.tags-heatbox h2 {
+	position: relative;
+}
+
+.tags-heatbox h2 .action-status {
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	padding: 10px;
+	height: 30px;
+	line-height: 10px;
+	font-size: 11px;
+	color: #fff;
+	background-color: #444;
+	border-radius: 4px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-50%);
+	transition: all 0.3s ease-in-out;
+}
+
+.tags-heatbox h2 .action-status.is-shown {
+	opacity: 1;
+	visibility: visible;
+}
+
+.tags-heatbox .heatbox-content p:last-child {
+	margin-bottom: 0;
+}
+
+.heatbox .tags-wrapper code {
+	display: inline-block;
+	margin-bottom: 5px;
+	padding: 8px 13px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #f8f8f8;
+	}
+}
+
+/* Tooltip */
+.heatbox-tooltip {
+	position: relative;
+	cursor: pointer;
+	padding: 5px;
+}
+
+.heatbox-tooltip .tooltip-content {
+	visibility: hidden;
+	opacity: 0;
+	width: 220px;
+	background-color: #fff;
+	text-align: center;
+	padding: 10px;
+	font-size: 12px;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	position: absolute;
+	left: -100px;
+	border: 1px solid #ddd;
+	bottom: 23px;
+	z-index: 1;
+}
+
+.heatbox-tooltip:hover .tooltip-content {
+	visibility: visible;
+	opacity: 1;
+	bottom: 28px;
+}
+
+.heatbox-tooltip.has-image .tooltip-content {
+	padding: 0;
+	text-align: left;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	width: 370px;
+}
+
+.heatbox-tooltip.has-image .tooltip-content img {
+	width: 35%;
+	border-right: 1px solid #eee;
+}
+
+.heatbox-tooltip.has-image .tooltip-content span {
+	width: 65%;
+	padding: 20px;
+}
+
+/* Footer */
+.heatbox-footer .button .dashicons {
+	line-height: 1;
+}
+
+/* Misc */
+.heatbox .row-disabled {
+	background-color: #f5f5f5;
+	opacity: 0.5;
+}
+
+.heatbox .row-disabled input[type="text"]:read-only,
+.heatbox .row-disabled input[type="number"]:read-only {
+	background-color: #e0e0e0;
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+
+/* Container - Narrow */
+.heatbox-container-narrow {
+	max-width: 1000px;
+}
+
+/* Badge */
+.heatbox-badge {
+	display: inline-block;
+	padding: 2px 7px;
+	border-radius: 4px;
+	background: #f0f0f1;
+	color: #1e1e1e;
+	font-size: 10px;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.heatbox-badge.is-pro {
+	background: #00a32a;
+	color: #fff;
+}
+
+/* Field */
+.heatbox .heatbox-field .field-label {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: 600;
+}
+
+.heatbox .heatbox-field .description {
+	margin: 4px 0 0 0;
+}
+
+.heatbox-inline-fields {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 24px;
+	margin: 12px 0;
+}
+
+.heatbox-inline-fields > label {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+/* Code */
+.heatbox-code {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 8px;
+	padding: 6px 6px 6px 12px;
+	background: #f6f7f7;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+}
+
+.heatbox-code code {
+	flex: 1;
+	min-width: 0;
+	padding: 0;
+	background: transparent;
+	font-size: 13px;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.heatbox-code .button {
+	flex: 0 0 auto;
+}
+
+/* Inner call to action */
+.heatbox > .heatbox-cta {
+	border: none;
+	border-top: 1px solid #e0e0e0;
+	border-radius: 0 0 8px 8px;
+}
+
+/* Credit */
+.heatbox-credit {
+	margin: 20px 0;
+	text-align: center;
+	opacity: 0.5;
+}
+
+/* Hero */
+.heatbox-hero {
+	background: linear-gradient(135deg, #1d2327 0%, #22296b 100%);
+	color: #fff;
+}
+
+.heatbox-hero > .heatbox-container {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 40px;
+	align-items: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+@media screen and (max-width: 1080px) {
+	.heatbox-hero > .heatbox-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+.heatbox-hero .heatbox-brand {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 12px 0;
+	color: #c3c4c7;
+	font-weight: 500;
+}
+
+.heatbox-hero .heatbox-brand img {
+	width: 28px;
+	height: 28px;
+}
+
+.heatbox-hero .version {
+	background: rgba(255, 255, 255, 0.12);
+	color: #dcdcde;
+}
+
+.heatbox-hero .headline {
+	display: block;
+	margin: 0 0 24px 0;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1.25;
+}
+
+.heatbox-hero .heatbox {
+	margin: 0;
+	border: none;
+	color: #1e1e1e;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Hero panel */
+.heatbox-hero-panel {
+	margin-top: 16px;
+	padding: 14px 16px;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 8px;
+}
+
+.heatbox-hero-panel .panel-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 10px 0;
+	font-weight: 600;
+}
+
+.heatbox-hero-panel .panel-controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 20px;
+}
+
+.heatbox-hero-panel .panel-controls label {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: #dcdcde;
+}
+
+.heatbox-hero-panel input[type="color"] {
+	width: 32px;
+	height: 24px;
+	padding: 0;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	background: none;
+	cursor: pointer;
+}
+
+.heatbox-hero-panel input[type="range"] {
+	width: 100px;
+	accent-color: #fff;
+}
+
+.heatbox-hero-panel .panel-note {
+	margin: 10px 0 0 0;
+	color: #a7aaad;
+	font-size: 12px;
+}
+
+.heatbox-hero-panel .panel-note a {
+	color: #fff;
+}
+
+/* Browser mockup */
+.heatbox-browser {
+	overflow: hidden;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.heatbox-browser .browser-bar {
+	display: flex;
+	gap: 6px;
+	padding: 10px 12px;
+	background: #f0f0f1;
+}
+
+.heatbox-browser .browser-bar i {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #c3c4c7;
+}
+
+.heatbox-browser .browser-page {
+	position: relative;
+	aspect-ratio: 16 / 9;
+	padding: 24px;
+}
+
+.heatbox-browser .browser-skeleton b {
+	display: block;
+	height: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	background: #f0f0f1;
+}
+
+.heatbox-browser .browser-skeleton b:first-child {
+	width: 60%;
+	height: 16px;
+}
+
+.heatbox-browser .browser-skeleton b:nth-child(3) {
+	width: 80%;
+}
+
+.heatbox-browser .browser-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.heatbox-browser .browser-overlay[hidden] {
+	display: none;
+}
+
+.heatbox-browser .browser-media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 16 / 9;
+	max-height: 85%;
+	border-radius: 2px;
+	background: linear-gradient(135deg, #3c434a, #101517);
+	transition: width 0.15s;
+}
+
+.heatbox-browser .browser-media .dashicons {
+	width: 40px;
+	height: 40px;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 40px;
+}
+
+.heatbox-browser .browser-close {
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	padding: 0;
+	border: none;
+	background: none;
+	color: #fff;
+	font-size: 22px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+/* Comparison table */
+.heatbox-table-scroll {
+	overflow-x: auto;
+}
+
+.heatbox-compare {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.heatbox-compare th,
+.heatbox-compare td {
+	padding: 10px 12px;
+	border-bottom: 1px solid #f0f0f1;
+	text-align: left;
+}
+
+.heatbox-compare td,
+.heatbox-compare thead th:not(:first-child) {
+	width: 100px;
+	text-align: center;
+}
+
+.heatbox-compare tbody th {
+	font-weight: 400;
+}
+
+.heatbox-compare .is-highlighted {
+	background: color-mix(in srgb, var(--wp-admin-theme-color, #3858e9) 8%, #fff);
+}
+
+.heatbox-compare thead .is-highlighted {
+	border-radius: 6px 6px 0 0;
+	color: var(--wp-admin-theme-color, #3858e9);
+}
+
+.heatbox-compare .dashicons-yes-alt {
+	color: #00a32a;
+}
+
+.heatbox-compare .is-missing {
+	color: #a7aaad;
+}
+
+/* Footer links */
+.heatbox-footer-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 20px;
+}
+
+.heatbox-footer-links a {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	text-decoration: none;
+}
+
+.heatbox-footer-links .dashicons {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+}
+
+.heatbox-footer-links .spacer {
+	flex: 1;
+}
+
+.heatbox-footer-links .label {
+	color: #646970;
+}
+
+/* RTL */
+.rtl .heatbox-header .logo-container img {
+	float: left;
+}
+
+.rtl .heatbox-main {
+	margin-right: 0;
+	margin-left: 2%;
+}
+
+.rtl .heatbox .label .indicator {
+	left: auto;
+	right: -30px;
+}
