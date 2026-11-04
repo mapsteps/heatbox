@@ -54,23 +54,23 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 				<div class="heatbox">
 					<h2>Getting started</h2>
 					<div class="heatbox-content">
-						<p>Place the shortcode on any page, then give a button or link the class <code>wp-video-popup</code>. Clicking it opens the lightbox.</p>
+						<p>Welcome to your plugin. Configure the options below, then save your changes. Settings take effect immediately.</p>
 						<p class="description">A regular <code>.heatbox</code> with an <code>h2</code> and <code>.heatbox-content</code>.</p>
 					</div>
 				</div>
 
 				<!-- Box with settings table + attached primary CTA (becomes the box footer) -->
 				<div class="heatbox">
-					<h2>Popup appearance</h2>
+					<h2>Appearance</h2>
 					<table class="form-table">
 						<tr>
-							<th scope="row">Overlay color</th>
-							<td><input type="text" class="regular-text" value="rgba(0, 0, 0, 0.88)"></td>
+							<th scope="row">Accent color</th>
+							<td><input type="text" class="regular-text" value="#3858e9"></td>
 						</tr>
 						<tr>
-							<th scope="row">Video width</th>
+							<th scope="row">Max width</th>
 							<td>
-								<input type="text" class="small-text" value="1200px">
+								<input type="number" class="small-text" value="1200"> px
 								<p class="description">Default: 1200px</p>
 							</td>
 						</tr>
@@ -78,7 +78,7 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 				</div>
 				<div class="heatbox-cta-container is-attached">
 					<div class="heatbox-cta primary">
-						<p>This feature is available in PRO.</p>
+						<p>These settings are available in PRO.</p>
 						<a href="#" class="button button-primary">Upgrade to PRO</a>
 					</div>
 				</div>
@@ -97,16 +97,16 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 
 				<!-- Box with an attached container holding free content -->
 				<div class="heatbox">
-					<h2>PRO features</h2>
+					<h2>Go PRO</h2>
 					<div class="heatbox-content">
-						<h3>Multiple videos per page</h3>
-						<p class="description">Add as many popups as you like to a single page.</p>
-						<h3>Video galleries</h3>
-						<p class="description">Let viewers cycle through videos without closing the lightbox.</p>
+						<h3>Advanced settings</h3>
+						<p class="description">Unlock additional options to fine-tune every detail.</p>
+						<h3>Priority support</h3>
+						<p class="description">Get help from the developers directly, usually within a day.</p>
 					</div>
 				</div>
 				<div class="heatbox-cta-container is-attached">
-					<p>Get <strong>70% off PRO</strong> today, applied automatically at checkout.</p>
+					<p>Upgrade to <strong>PRO</strong> to get all features and priority support.</p>
 					<a href="#" class="button button-primary button-larger">Upgrade to PRO</a>
 				</div>
 
@@ -150,7 +150,7 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 				<div class="heatbox">
 					<a href="#"><img src="<?php echo esc_url( $heatbox_img . 'placeholder.svg' ); ?>" alt=""></a>
 					<div class="heatbox-content">
-						<h3>Ultimate Dashboard</h3>
+						<h3>Another plugin</h3>
 						<p class="description">A box starting with an image gets rounded top corners.</p>
 						<a href="#" class="button">Learn more</a>
 					</div>
@@ -227,12 +227,12 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 							<th scope="row">Radio buttons</th>
 							<td>
 								<label class="label radio-label">
-									Landscape
+									Option A
 									<input type="radio" name="heatbox_demo_radio" checked>
 									<div class="indicator"></div>
 								</label>
 								<label class="label radio-label">
-									Portrait
+									Option B
 									<input type="radio" name="heatbox_demo_radio">
 									<div class="indicator"></div>
 								</label>
