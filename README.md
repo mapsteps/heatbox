@@ -49,6 +49,9 @@ All colors, borders, radii and spacing are `--heatbox-*` custom properties (sect
 | `.heatbox-container` (`-wide`, `-center`) | Max-width container |
 | `.heatbox-column-container` > `.heatbox-main` + `.heatbox-sidebar` | Two columns |
 | `.heatbox` > `h2` + `.heatbox-content` | Box (`.is-grouped` for several sections) |
+| `.heatbox.is-locked` | Faded, non-clickable box content (e.g. PRO-only settings) |
+| `.heatbox-badge` | Pill badge, e.g. PRO next to a title |
+| `.heatbox-features` > `li` > `.dashicons` + `div` | Two-column feature list with check marks |
 | `.heatbox .form-table`, `.setting-fields` > `.setting-field` | Settings |
 | `.label.checkbox-label` / `.label.radio-label` + `.indicator` | Checkbox / radio |
 | `.toggle-switch` > `input` + `.switch-track` > `.switch-thumb` | Toggle |

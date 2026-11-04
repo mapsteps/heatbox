@@ -292,6 +292,20 @@ body {
 	border-radius: 999px;
 }
 
+/* Badge, e.g. next to a box title: <span class="heatbox-badge">PRO</span> */
+.heatbox-badge {
+	display: inline-block;
+	margin-inline-start: 6px;
+	padding: 2px 8px;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.4;
+	vertical-align: middle;
+	color: var(--heatbox-text-on-accent);
+	background: var(--heatbox-accent);
+	border-radius: 999px;
+}
+
 /* 6. Box
    ========================================================================== */
 
@@ -368,6 +382,64 @@ body {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 	box-shadow: none;
+}
+
+/**
+ * Locked box (e.g. PRO-only settings): everything except the title is faded
+ * and not clickable. Add the inert attribute to the content for keyboard users.
+ *
+ * <div class="heatbox is-locked"><h2>Title <span class="heatbox-badge">PRO</span></h2><table class="form-table" inert>…</table></div>
+ */
+.heatbox.is-locked > :not(h2) {
+	opacity: 0.55;
+	pointer-events: none;
+	user-select: none;
+}
+
+/**
+ * Feature list: two columns with check marks, one column on small screens.
+ *
+ * <ul class="heatbox-features">
+ *   <li><span class="dashicons dashicons-yes"></span><div><h3>Feature</h3><p class="description">…</p></div></li>
+ * </ul>
+ */
+.heatbox-features {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px 32px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.heatbox-features li {
+	display: flex;
+	gap: 12px;
+	margin: 0;
+}
+
+.heatbox-features .dashicons {
+	flex-shrink: 0;
+	width: 22px;
+	height: 22px;
+	font-size: 22px;
+	color: var(--heatbox-accent);
+	background: var(--heatbox-accent-soft);
+	border-radius: 50%;
+}
+
+.heatbox .heatbox-features h3 {
+	margin: 1px 0 4px;
+}
+
+.heatbox .heatbox-features p {
+	margin: 0;
+}
+
+@media screen and (max-width: 782px) {
+	.heatbox-features {
+		grid-template-columns: 1fr;
+	}
 }
 
 /* 7. Settings & form controls

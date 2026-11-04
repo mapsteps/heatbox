@@ -59,10 +59,10 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 					</div>
 				</div>
 
-				<!-- Box with settings table + attached primary CTA (becomes the box footer) -->
-				<div class="heatbox">
-					<h2>Appearance</h2>
-					<table class="form-table">
+				<!-- Locked box with a badge + attached primary CTA (becomes the box footer) -->
+				<div class="heatbox is-locked">
+					<h2>Appearance <span class="heatbox-badge">PRO</span></h2>
+					<table class="form-table" inert>
 						<tr>
 							<th scope="row">Accent color</th>
 							<td><input type="text" class="regular-text" value="#3858e9"></td>
@@ -95,14 +95,40 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 					</div>
 				</div>
 
-				<!-- Box with an attached container holding free content -->
+				<!-- Feature list + attached container holding free content -->
 				<div class="heatbox">
-					<h2>Go PRO</h2>
+					<h2>Go PRO <span class="heatbox-badge">PRO</span></h2>
 					<div class="heatbox-content">
-						<h3>Advanced settings</h3>
-						<p class="description">Unlock additional options to fine-tune every detail.</p>
-						<h3>Priority support</h3>
-						<p class="description">Get help from the developers directly, usually within a day.</p>
+						<ul class="heatbox-features">
+							<li>
+								<span class="dashicons dashicons-yes"></span>
+								<div>
+									<h3>Advanced settings</h3>
+									<p class="description">Unlock additional options to fine-tune every detail.</p>
+								</div>
+							</li>
+							<li>
+								<span class="dashicons dashicons-yes"></span>
+								<div>
+									<h3>Priority support</h3>
+									<p class="description">Get help from the developers directly, usually within a day.</p>
+								</div>
+							</li>
+							<li>
+								<span class="dashicons dashicons-yes"></span>
+								<div>
+									<h3>Unlimited sites</h3>
+									<p class="description">Use the plugin on as many websites as you like.</p>
+								</div>
+							</li>
+							<li>
+								<span class="dashicons dashicons-yes"></span>
+								<div>
+									<h3>Import &amp; export</h3>
+									<p class="description">Move your settings between sites in seconds.</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="heatbox-cta-container is-attached">
@@ -365,7 +391,7 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 				<div class="heatbox">
 					<h2>Typography</h2>
 					<div class="heatbox-content">
-						<h3>Heading 3</h3>
+						<h3>Heading 3 <span class="heatbox-badge">New</span></h3>
 						<p>Body text in a box. <a href="#">A link</a>.</p>
 						<p class="description">Description text.</p>
 						<p><code>inline code</code></p>
