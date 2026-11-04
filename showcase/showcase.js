@@ -71,6 +71,20 @@
 		});
 	});
 
+	// Copy field.
+	document.querySelectorAll('.heatbox-demo-copy').forEach(function (button) {
+		button.addEventListener('click', function () {
+			var code = button.closest('.heatbox-copy').querySelector('code');
+			if (navigator.clipboard) navigator.clipboard.writeText(code.textContent);
+			button.classList.add('is-copied');
+			button.textContent = 'Copied!';
+			setTimeout(function () {
+				button.classList.remove('is-copied');
+				button.textContent = 'Copy';
+			}, 1200);
+		});
+	});
+
 	// Demo links go nowhere.
 	document.querySelectorAll('.heatbox-wrap a[href="#"]').forEach(function (link) {
 		link.addEventListener('click', function (e) {

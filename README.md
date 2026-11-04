@@ -59,6 +59,8 @@ All colors, borders, radii and spacing are `--heatbox-*` custom properties (sect
 | `.heatbox-cta` (`.primary`, `.secondary`), `.heatbox-cta-container.is-attached` | Call to action |
 | `.heatbox-status-indicator` (`.is-loading`, `.is-done`) | Save status in a box title |
 | `.tags-heatbox`, `.tags-wrapper code` | Copyable tags |
+| `ol.heatbox-steps` > `li` | Numbered steps |
+| `.heatbox-copy` > `code` + `.button` (`.is-copied`) | Code snippet with a copy button |
 | `.heatbox-tooltip` > `.tooltip-content` (`.has-image`) | Tooltip |
 | `.heatbox-divider`, `.heatbox-margin-top/-bottom`, `.row-disabled` | Utilities |
 

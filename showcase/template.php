@@ -359,6 +359,27 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 					</div>
 				</div>
 
+				<!-- Steps + copy field -->
+				<div class="heatbox">
+					<h2>Steps</h2>
+					<div class="heatbox-content">
+						<ol class="heatbox-steps">
+							<li>
+								<h3>Add the shortcode</h3>
+								<p class="description">Paste it into any page or post.</p>
+								<div class="heatbox-copy">
+									<code>[my-shortcode id="42"]</code>
+									<button type="button" class="button heatbox-demo-copy">Copy</button>
+								</div>
+							</li>
+							<li>
+								<h3>Save and preview</h3>
+								<p class="description">Each <code>li</code> of <code>.heatbox-steps</code> gets a number. Code with a button: <code>.heatbox-copy</code>.</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+
 				<!-- Tooltips -->
 				<div class="heatbox">
 					<h2>Tooltips</h2>
