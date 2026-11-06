@@ -35,9 +35,11 @@ All colors, borders, radii and spacing are `--heatbox-*` custom properties (sect
 ```css
 .my-plugin .heatbox-wrap {
 	--heatbox-accent: #e63946;
-	--heatbox-radius: 12px;
+	--heatbox-box-padding: 24px;
 }
 ```
+
+Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` and `--heatbox-shadow`. Text fields & selects inside a box use `--heatbox-control-height`, `--heatbox-radius-control` and `--heatbox-border`, with a focus ring in the accent color.
 
 ## Components
 
@@ -52,7 +54,7 @@ All colors, borders, radii and spacing are `--heatbox-*` custom properties (sect
 | `.heatbox.is-locked` | Faded, non-clickable box content (e.g. PRO-only settings) |
 | `.heatbox-badge` | Pill badge, e.g. PRO next to a title |
 | `.heatbox-features` > `li` > `.dashicons` + `div` | Two-column feature list with check marks |
-| `.heatbox .form-table`, `.setting-fields` > `.setting-field` | Settings |
+| `.heatbox .form-table`, `.setting-fields` > `.setting-field` | Settings (text fields, selects & textareas inside a box are styled too) |
 | `.label.checkbox-label` / `.label.radio-label` + `.indicator` | Checkbox / radio |
 | `.toggle-switch` > `input` + `.switch-track` > `.switch-thumb` | Toggle |
 | `.button.is-loading`, `.button-larger`, `.button-full`, `.button > .dashicons` | Button modifiers |

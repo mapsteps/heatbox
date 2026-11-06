@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Heatbox
  * Description: Showcase of the Heatbox admin UI used across Mapsteps plugins. Adds Tools → Heatbox with every component and sample data.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: David Vongries
  * Author URI: https://mapsteps.com
  * License: GPL v2 or later
@@ -14,7 +14,7 @@
 
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 
-define( 'HEATBOX_VERSION', '1.0.0' );
+define( 'HEATBOX_VERSION', '1.1.0' );
 define( 'HEATBOX_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HEATBOX_URL', plugin_dir_url( __FILE__ ) );
 
