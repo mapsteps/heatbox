@@ -46,6 +46,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | Class | What |
 |---|---|
 | `.heatbox-wrap` | Page wrapper |
+| `hr.wp-header-end` | WordPress' marker: admin notices are moved right after it. Put it at the top of `.heatbox-main` |
 | `.heatbox-header`, `.logo-container`, `.title`, `.subtitle`, `.version` | Page header |
 | `.heatbox-tab-nav` (`li.active`) | Tabs in the header |
 | `.heatbox-container` (`-wide`, `-center`) | Max-width container |

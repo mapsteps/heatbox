@@ -39,9 +39,6 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 		</div>
 	</div>
 
-	<!-- Faking H1 tag to place admin notices -->
-	<h1 style="display: none;"></h1>
-
 	<!-- ===================================================================
 	     Boxes
 	     =================================================================== -->
@@ -49,6 +46,9 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 		<div class="heatbox-container heatbox-container-center heatbox-column-container">
 
 			<div class="heatbox-main">
+
+				<!-- WordPress places admin notices after this marker -->
+				<hr class="wp-header-end">
 
 				<!-- Simple box -->
 				<div class="heatbox">
