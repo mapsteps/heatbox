@@ -11,7 +11,7 @@
  * 5.  Typography
  * 6.  Box
  * 7.  Settings & form controls
- * 8.  Buttons
+ * 8.  Buttons & color picker
  * 9.  Call to action
  * 10. Status indicator
  * 11. Tags
@@ -750,7 +750,7 @@ body {
 	cursor: default;
 }
 
-/* 8. Buttons
+/* 8. Buttons & color picker
    ========================================================================== */
 
 /**
@@ -829,6 +829,88 @@ body {
 	font-size: 16px;
 	line-height: 1;
 	vertical-align: middle;
+}
+
+/**
+ * Color picker: WP's wp-color-picker (incl. the wp-color-picker-alpha add-on),
+ * styled like the fields: input border & focus, 40px high, evenly spaced.
+ */
+.heatbox-wrap .wp-picker-container .button.wp-color-result {
+	height: var(--heatbox-control-height);
+	min-height: var(--heatbox-control-height);
+	margin: 0;
+	padding: 0 0 0 40px;
+	overflow: hidden; /* The rounded corners clip the swatch */
+	color: var(--heatbox-text);
+	border-color: var(--heatbox-border);
+	border-radius: var(--heatbox-radius-control);
+	box-shadow: none;
+}
+
+.heatbox-wrap .wp-picker-container .button.wp-color-result:hover,
+.heatbox-wrap .wp-picker-container.wp-picker-active .button.wp-color-result {
+	color: var(--heatbox-text);
+	border-color: var(--heatbox-control-border);
+	box-shadow: none;
+}
+
+.heatbox-wrap .wp-picker-container .button.wp-color-result:focus {
+	color: var(--heatbox-text);
+	border-color: var(--heatbox-accent);
+	outline: none;
+	box-shadow: 0 0 0 3px var(--heatbox-accent-soft-border);
+}
+
+.heatbox-wrap .wp-color-result .wp-color-result-text {
+	height: 100%;
+	padding: 0 12px;
+	line-height: calc(var(--heatbox-control-height) - 2px);
+	background: var(--heatbox-surface);
+	border-left-color: var(--heatbox-border);
+	border-radius: 0;
+}
+
+/* The alpha add-on's swatch is 30px wide by default */
+.heatbox-wrap .wp-color-result .color-alpha {
+	width: 40px !important;
+	height: 100% !important;
+	border-radius: 0 !important;
+}
+
+.heatbox-wrap .wp-picker-input-wrap:not(.hidden) {
+	display: inline-flex;
+	gap: 6px;
+	margin-inline-start: 6px;
+	vertical-align: top;
+}
+
+.heatbox-wrap .wp-picker-container .wp-picker-input-wrap > label,
+.heatbox-wrap .wp-picker-container .wp-picker-input-wrap .button.wp-picker-default {
+	margin: 0;
+}
+
+.heatbox-wrap .wp-picker-container input[type="text"].wp-color-picker {
+	width: 90px;
+	height: var(--heatbox-control-height);
+	min-height: var(--heatbox-control-height);
+	margin: 0;
+	vertical-align: top;
+}
+
+.heatbox-wrap .wp-picker-input-wrap .button {
+	min-height: var(--heatbox-control-height);
+}
+
+/* Square, hue & alpha side by side (the alpha add-on otherwise pushes the sliders below the panel) */
+.heatbox-wrap .iris-picker-inner {
+	display: grid;
+	grid-template-columns: 1fr 20px 20px;
+	gap: 7px;
+}
+
+.heatbox-wrap .iris-picker-inner > * {
+	width: 100% !important;
+	margin-left: 0 !important;
 }
 
 /* 9. Call to action

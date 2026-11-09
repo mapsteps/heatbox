@@ -85,6 +85,11 @@
 		});
 	});
 
+	// Color picker.
+	if (window.jQuery && jQuery.fn.wpColorPicker) {
+		jQuery('.heatbox-demo-color').wpColorPicker();
+	}
+
 	// Demo links go nowhere.
 	document.querySelectorAll('.heatbox-wrap a[href="#"]').forEach(function (link) {
 		link.addEventListener('click', function (e) {

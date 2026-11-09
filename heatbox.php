@@ -46,8 +46,9 @@ function heatbox_showcase_assets( $hook ) {
 	// Cache-bust on every change while working on the stylesheet.
 	$css_version = HEATBOX_VERSION . '.' . filemtime( HEATBOX_DIR . 'heatbox.css' );
 
-	wp_enqueue_style( 'heatbox', HEATBOX_URL . 'heatbox.css', array(), $css_version );
-	wp_enqueue_script( 'heatbox-showcase', HEATBOX_URL . 'showcase/showcase.js', array(), HEATBOX_VERSION, true );
+	wp_enqueue_style( 'wp-color-picker' );
+	wp_enqueue_style( 'heatbox', HEATBOX_URL . 'heatbox.css', array( 'wp-color-picker' ), $css_version );
+	wp_enqueue_script( 'heatbox-showcase', HEATBOX_URL . 'showcase/showcase.js', array( 'wp-color-picker' ), HEATBOX_VERSION, true );
 }
 add_action( 'admin_enqueue_scripts', 'heatbox_showcase_assets' );
 

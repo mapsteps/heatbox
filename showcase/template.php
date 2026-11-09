@@ -288,6 +288,13 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 								</div>
 							</td>
 						</tr>
+						<tr>
+							<th scope="row">
+								<label for="heatbox-demo-color">Color picker</label>
+								<p class="description">WP's <code>wp-color-picker</code>.</p>
+							</th>
+							<td><input type="text" id="heatbox-demo-color" class="heatbox-demo-color" value="#2271b1" data-default-color="#2271b1"></td>
+						</tr>
 						<tr class="row-disabled">
 							<th scope="row">
 								Disabled row
