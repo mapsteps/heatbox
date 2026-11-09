@@ -39,6 +39,8 @@ All colors, borders, radii and spacing are `--heatbox-*` custom properties (sect
 }
 ```
 
+Status colors are `--heatbox-success`, `--heatbox-error` and `--heatbox-warning`, each with a `-soft` background shade.
+
 Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` and `--heatbox-shadow`. Text fields & selects inside a box use `--heatbox-control-height`, `--heatbox-radius-control` and `--heatbox-border`, with a focus ring in the accent color.
 
 ## Components
@@ -47,25 +49,33 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 |---|---|
 | `.heatbox-wrap` | Page wrapper |
 | `hr.wp-header-end` | WordPress' marker: admin notices are moved right after it. Put it at the top of `.heatbox-main` |
-| `.heatbox-header`, `.logo-container`, `.title`, `.subtitle`, `.version` | Page header |
-| `.heatbox-tab-nav` (`li.active`) | Tabs in the header |
+| `.heatbox-header` (`.heatbox-has-tab-nav`), `.logo-container`, `h1.title`, `.subtitle`, `.version` | Page header. Use an `h1` for the title: the page needs one |
+| `.heatbox-tab-nav` (`li.active`) | Tabs in the header. Give each tab and its `.heatbox-admin-panel` the same `data-panel="name"`; your JS shows the matching panel (see `showcase/showcase.js`) |
+| `.heatbox-admin-panel` | Tab panel, hidden until your JS shows it |
 | `.heatbox-container` (`-wide`, `-center`) | Max-width container |
 | `.heatbox-column-container` > `.heatbox-main` + `.heatbox-sidebar` | Two columns |
 | `.heatbox` > `h2` + `.heatbox-content` | Box (`.is-grouped` for several sections) |
 | `.heatbox.is-locked` | Faded, non-clickable box content (e.g. PRO-only settings) |
-| `.heatbox-badge` | Pill badge, e.g. PRO next to a title |
+| `.heatbox-badge` (`.is-success`, `.is-warning`, `.is-error`, `.is-neutral`) | Pill badge, e.g. PRO next to a title, or a status like Active / Failed |
 | `.heatbox-features` > `li` > `.dashicons` + `div` | Two-column feature list with check marks |
 | `.heatbox .form-table`, `.setting-fields` > `.setting-field` | Settings (text fields, selects & textareas inside a box are styled too) |
 | `.label.checkbox-label` / `.label.radio-label` + `.indicator` | Checkbox / radio |
 | `.toggle-switch` > `input` + `.switch-track` > `.switch-thumb` | Toggle |
-| `.button.is-loading`, `.button-larger`, `.button-full`, `.button > .dashicons` | Button modifiers |
+| `input.small-text` + `span.heatbox-unit` | Small number field with a unit, e.g. `px` |
+| WP's `wp-color-picker` (with or without the alpha add-on) | Color field, styled like the inputs; nothing extra to add |
+| `.button.is-loading`, `.button-larger`, `.button-full`, `.button.is-destructive`, `.button > .dashicons` | Button modifiers (`.is-destructive`: red outline, e.g. Reset) |
 | `.heatbox-cta` (`.primary`, `.secondary`), `.heatbox-cta-container.is-attached` | Call to action |
-| `.heatbox-status-indicator` (`.is-loading`, `.is-done`) | Save status in a box title |
+| `.heatbox-form-footer` > `div` + `div` | Save on the left, reset on the right, below the boxes |
+| `.heatbox-notice` (`.is-shown`, `.is-success`, `.is-error`, `role="status"`) | Save message next to the save button in the form footer |
+| `.heatbox-status-indicator` (`.is-loading`, `.is-done`) | Save status inside a box title (for settings saved per box) |
 | `.tags-heatbox`, `.tags-wrapper code` | Copyable tags |
 | `ol.heatbox-steps` > `li` | Numbered steps |
 | `.heatbox-copy` > `code` + `.button` (`.is-copied`) | Code snippet with a copy button |
 | `.heatbox-tooltip` > `.tooltip-content` (`.has-image`) | Tooltip |
+| `.heatbox-products` > `h2` + `ul.products` > `li.heatbox` + `.credit` | "Our other products" section below the settings (`.featured-products` still works) |
+| Sidebar review box: `.heatbox` > `h2` "Leave a review" + `.heatbox-content` > `p.description` + `a.button` | No extra CSS. Add `<span class="screen-reader-text"> (opens in a new tab)</span>` to links with `target="_blank"` |
 | `.heatbox-divider`, `.heatbox-margin-top/-bottom`, `.row-disabled` | Utilities |
+| `[hidden]` | Hides an element even if heatbox or WP gives it a `display` (e.g. a `.button`) |
 
 RTL is supported, mostly through logical properties. It works in all current browsers and uses `:has()` and `color-mix()`.
 

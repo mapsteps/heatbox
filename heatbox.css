@@ -20,6 +20,8 @@
  * 14. Tooltip
  * 15. Misc
  * 16. Animations
+ * 17. Form footer & save notice
+ * 18. Products
  */
 
 /* 1. Tokens
@@ -46,6 +48,13 @@ body {
 	--heatbox-control-off: #c3c4c7;
 	--heatbox-control-disabled: #a7aaad;
 
+	--heatbox-success: #00a32a;
+	--heatbox-success-soft: #edfaef;
+	--heatbox-error: #d63638;
+	--heatbox-error-soft: #fcf0f1;
+	--heatbox-warning: #dba617;
+	--heatbox-warning-soft: #fcf9e8;
+
 	--heatbox-gap: 20px;
 	--heatbox-box-padding: 24px;
 	--heatbox-section-gap: 40px;
@@ -66,6 +75,11 @@ body {
 .heatbox-wrap,
 .heatbox-wrap * {
 	box-sizing: border-box;
+}
+
+/* The hidden attribute wins over display rules (e.g. on .button) */
+.heatbox-wrap [hidden] {
+	display: none !important;
 }
 
 .heatbox-admin.has-header .update-nag {
@@ -311,6 +325,27 @@ body {
 	border-radius: 999px;
 }
 
+/* Status badges: <span class="heatbox-badge is-success">Active</span> (also is-error, is-warning, is-neutral) */
+.heatbox-badge.is-success {
+	color: var(--heatbox-success);
+	background: var(--heatbox-success-soft);
+}
+
+.heatbox-badge.is-error {
+	color: var(--heatbox-error);
+	background: var(--heatbox-error-soft);
+}
+
+.heatbox-badge.is-warning {
+	color: #8a6d0b;
+	background: var(--heatbox-warning-soft);
+}
+
+.heatbox-badge.is-neutral {
+	color: var(--heatbox-text-muted);
+	background: var(--heatbox-surface-muted);
+}
+
 /* 6. Box
    ========================================================================== */
 
@@ -467,6 +502,21 @@ body {
 /* Labels line up with the middle of a field */
 .heatbox .form-table th {
 	padding-top: 33px;
+}
+
+/* Toggles line up with the row label */
+.heatbox .form-table td > .toggle-switch {
+	margin-top: 10px;
+}
+
+/* Small number field with a unit: <input type="number" class="small-text"> <span class="heatbox-unit">px</span> */
+.heatbox input.small-text {
+	width: 100px;
+}
+
+.heatbox-unit {
+	margin-inline-start: 6px;
+	color: var(--heatbox-text-muted);
 }
 
 @media screen and (max-width: 782px) {
@@ -829,6 +879,19 @@ body {
 	font-size: 16px;
 	line-height: 1;
 	vertical-align: middle;
+}
+
+/* Destructive action, e.g. Reset: <button class="button is-destructive"> */
+.heatbox-wrap .button.is-destructive {
+	color: var(--heatbox-error);
+	border-color: var(--heatbox-error);
+}
+
+.heatbox-wrap .button.is-destructive:hover,
+.heatbox-wrap .button.is-destructive:focus {
+	color: #fff;
+	background-color: var(--heatbox-error);
+	border-color: var(--heatbox-error);
 }
 
 /**
@@ -1318,5 +1381,129 @@ body {
 	.heatbox-status-indicator.is-loading::after,
 	.heatbox-status-indicator.is-done {
 		animation-duration: 1.5s !important;
+	}
+}
+
+/* 17. Form footer & save notice
+   <div class="heatbox-form-footer">
+     <div><button class="button button-primary button-larger">Save</button> <span class="heatbox-notice" role="status"></span></div>
+     <div><button class="button button-larger is-destructive">Reset</button></div>
+   </div>
+   Show a message: add .is-shown and .is-success or .is-error to .heatbox-notice.
+   (.heatbox-status-indicator is the spinner/check inside a box title instead.)
+   ========================================================================== */
+
+.heatbox-form-footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.heatbox-form-footer > div {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+}
+
+.heatbox-notice {
+	font-weight: 500;
+	opacity: 0;
+	transition: opacity var(--heatbox-transition);
+}
+
+.heatbox-notice.is-shown {
+	opacity: 1;
+}
+
+.heatbox-notice.is-success {
+	color: var(--heatbox-success);
+}
+
+.heatbox-notice.is-error {
+	color: var(--heatbox-error);
+}
+
+@media screen and (max-width: 782px) {
+	.heatbox-form-footer {
+		flex-direction: column;
+		align-items: stretch;
+	}
+}
+
+/* 18. Products
+   "Our other products" below the settings:
+   <div class="heatbox-container heatbox-container-wide heatbox-container-center heatbox-products">
+     <h2>Title</h2>
+     <ul class="products">
+       <li class="heatbox">
+         <a href="…" aria-hidden="true" tabindex="-1"><img src="…" alt=""></a>
+         <div class="heatbox-content"><h3>Name</h3><p class="subheadline">Tagline</p><p>Text</p><a class="button" href="…">Learn more</a></div>
+       </li>
+     </ul>
+     <p class="credit">Made with ❤ in …</p>
+   </div>
+   .featured-products is the old class name & still works.
+   ========================================================================== */
+
+:is(.heatbox-products, .featured-products).heatbox-container-wide {
+	max-width: 1200px;
+}
+
+:is(.heatbox-products, .featured-products) > h2 {
+	margin: 0 0 24px;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	color: var(--heatbox-text);
+}
+
+:is(.heatbox-products, .featured-products) .products {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--heatbox-gap);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+:is(.heatbox-products, .featured-products) .products li {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+:is(.heatbox-products, .featured-products) .products .heatbox-content {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+:is(.heatbox-products, .featured-products) .products .heatbox-content .button {
+	align-self: flex-start;
+	margin-top: auto;
+}
+
+:is(.heatbox-products, .featured-products) .products .subheadline {
+	margin: 0 0 8px;
+	font-weight: 500;
+	color: var(--heatbox-text);
+}
+
+:is(.heatbox-products, .featured-products) .products img {
+	max-width: 100%;
+}
+
+:is(.heatbox-products, .featured-products) .credit {
+	margin: 32px 0 20px;
+	text-align: center;
+	color: var(--heatbox-text-muted);
+}
+
+@media screen and (max-width: 782px) {
+	:is(.heatbox-products, .featured-products) .products {
+		grid-template-columns: 1fr;
 	}
 }

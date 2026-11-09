@@ -19,17 +19,17 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 		<div class="heatbox-container heatbox-container-center">
 			<div class="logo-container">
 				<div>
-					<span class="title">
+					<h1 class="title">
 						Heatbox
 						<span class="version"><?php echo esc_html( HEATBOX_VERSION ); ?></span>
-					</span>
+					</h1>
 					<p class="subtitle">The shared admin UI for Mapsteps plugins.</p>
 				</div>
 				<div>
 					<img src="<?php echo esc_url( $heatbox_img . 'logo.svg' ); ?>" alt="">
 				</div>
 			</div>
-			<nav>
+			<nav aria-label="Sections">
 				<ul class="heatbox-tab-nav">
 					<li class="heatbox-tab-nav-item active" data-panel="boxes"><a href="#boxes">Boxes</a></li>
 					<li class="heatbox-tab-nav-item" data-panel="forms"><a href="#forms">Forms</a></li>
@@ -185,6 +185,25 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 			</div>
 
 		</div>
+
+		<!-- Products -->
+		<div class="heatbox-container heatbox-container-wide heatbox-container-center heatbox-products">
+			<h2>Check out our other products</h2>
+			<ul class="products">
+				<?php foreach ( array( 'First plugin', 'Second plugin', 'A theme' ) as $heatbox_product ) : ?>
+					<li class="heatbox">
+						<a href="#" aria-hidden="true" tabindex="-1"><img src="<?php echo esc_url( $heatbox_img . 'placeholder.svg' ); ?>" alt=""></a>
+						<div class="heatbox-content">
+							<h3><?php echo esc_html( $heatbox_product ); ?></h3>
+							<p class="subheadline">A short tagline.</p>
+							<p>One or two sentences about the product.</p>
+							<a href="#" class="button">Learn more</a>
+						</div>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+			<p class="credit">Made with ❤ in Torsby, Sweden</p>
+		</div>
 	</div>
 
 	<!-- ===================================================================
@@ -290,6 +309,13 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 						</tr>
 						<tr>
 							<th scope="row">
+								<label for="heatbox-demo-width">Number with a unit</label>
+								<p class="description">Uses <code>.small-text</code> + <code>.heatbox-unit</code>.</p>
+							</th>
+							<td><input type="number" id="heatbox-demo-width" class="small-text" value="320" min="0"> <span class="heatbox-unit">px</span></td>
+						</tr>
+						<tr>
+							<th scope="row">
 								<label for="heatbox-demo-color">Color picker</label>
 								<p class="description">WP's <code>wp-color-picker</code>.</p>
 							</th>
@@ -305,9 +331,15 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 					</table>
 				</div>
 
-				<p class="submit">
-					<button type="submit" class="button button-primary button-larger">Save Changes</button>
-				</p>
+				<div class="heatbox-form-footer">
+					<div>
+						<button type="submit" class="button button-primary button-larger">Save Changes</button>
+						<span class="heatbox-notice heatbox-demo-notice" role="status"></span>
+					</div>
+					<div>
+						<button type="button" class="button button-larger is-destructive heatbox-demo-reset">Reset Settings</button>
+					</div>
+				</div>
 
 			</form>
 
@@ -332,7 +364,22 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 							<a href="#" class="button button-primary button-larger">Larger</a>
 							<button type="button" class="button button-primary heatbox-demo-loading">Click to load</button>
 						</p>
+						<p><a href="#" class="button is-destructive">Destructive</a></p>
 						<p><a href="#" class="button button-full">Full width</a></p>
+					</div>
+				</div>
+
+				<!-- Badges -->
+				<div class="heatbox">
+					<h2>Badges <span class="heatbox-badge">PRO</span></h2>
+					<div class="heatbox-content">
+						<p>
+							<span class="heatbox-badge is-success">Active</span>
+							<span class="heatbox-badge is-warning">Expires soon</span>
+							<span class="heatbox-badge is-error">Failed</span>
+							<span class="heatbox-badge is-neutral">Inactive</span>
+						</p>
+						<p class="description">Add <code>.is-success</code>, <code>.is-warning</code>, <code>.is-error</code> or <code>.is-neutral</code> to <code>.heatbox-badge</code>.</p>
 					</div>
 				</div>
 

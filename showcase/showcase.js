@@ -85,6 +85,32 @@
 		});
 	});
 
+	// Form footer: save & reset show a notice.
+	var notice = document.querySelector('.heatbox-demo-notice');
+	var noticeTimer;
+
+	function showNotice(text, type) {
+		if (!notice) return;
+		notice.textContent = text;
+		notice.className = 'heatbox-notice heatbox-demo-notice is-shown is-' + type;
+		clearTimeout(noticeTimer);
+		noticeTimer = setTimeout(function () {
+			notice.classList.remove('is-shown');
+		}, 2500);
+	}
+
+	document.querySelectorAll('[data-panel="forms"] form').forEach(function (form) {
+		form.addEventListener('submit', function () {
+			showNotice('Settings saved.', 'success');
+		});
+	});
+
+	document.querySelectorAll('.heatbox-demo-reset').forEach(function (button) {
+		button.addEventListener('click', function () {
+			showNotice('Nothing to reset in the demo.', 'error');
+		});
+	});
+
 	// Color picker.
 	if (window.jQuery && jQuery.fn.wpColorPicker) {
 		jQuery('.heatbox-demo-color').wpColorPicker();
