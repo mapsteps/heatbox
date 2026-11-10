@@ -138,6 +138,24 @@ body {
 	}
 }
 
+/* Boxes side by side: <div class="heatbox-columns"><div class="heatbox">…</div><div class="heatbox">…</div></div> */
+.heatbox-columns {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--heatbox-gap);
+	margin-bottom: var(--heatbox-gap);
+}
+
+.heatbox-columns > .heatbox {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 782px) {
+	.heatbox-columns {
+		grid-template-columns: 1fr;
+	}
+}
+
 /* Divider */
 .heatbox-divider {
 	width: 100%;

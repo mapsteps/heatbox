@@ -54,6 +54,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | `.heatbox-admin-panel` | Tab panel, hidden until your JS shows it |
 | `.heatbox-container` (`-wide`, `-center`) | Max-width container |
 | `.heatbox-column-container` > `.heatbox-main` + `.heatbox-sidebar` | Two columns |
+| `.heatbox-columns` > `.heatbox` × 2 | Two boxes side by side, stacked on small screens |
 | `.heatbox` > `h2` + `.heatbox-content` | Box (`.is-grouped` for several sections) |
 | `.heatbox.is-locked` | Faded, non-clickable box content (e.g. PRO-only settings) |
 | `.heatbox-badge` (`.is-success`, `.is-warning`, `.is-error`, `.is-neutral`) | Pill badge, e.g. PRO next to a title, or a status like Active / Failed |

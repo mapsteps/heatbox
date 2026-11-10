@@ -95,6 +95,22 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 					</div>
 				</div>
 
+				<!-- Two boxes side by side -->
+				<div class="heatbox-columns">
+					<div class="heatbox">
+						<h2>Export</h2>
+						<div class="heatbox-content">
+							<p class="description">Two boxes next to each other: <code>.heatbox-columns</code>.</p>
+						</div>
+					</div>
+					<div class="heatbox">
+						<h2>Import</h2>
+						<div class="heatbox-content">
+							<p class="description">They stack on small screens.</p>
+						</div>
+					</div>
+				</div>
+
 				<!-- Feature list + attached container holding free content -->
 				<div class="heatbox">
 					<h2>Go PRO <span class="heatbox-badge">PRO</span></h2>
