@@ -65,6 +65,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | `input.small-text` + `span.heatbox-unit` | Small number field with a unit, e.g. `px` |
 | WP's `wp-color-picker` (with or without the alpha add-on) | Color field, styled like the inputs; nothing extra to add |
 | `.button.is-loading`, `.button-larger`, `.button-full`, `.button.is-destructive`, `.button > .dashicons` | Button modifiers (`.is-destructive`: red outline, e.g. Reset) |
+| `input[type="file"]` | File picker styled like a field with a button, no class needed |
 | `.heatbox-cta` (`.primary`, `.secondary`), `.heatbox-cta-container.is-attached` | Call to action |
 | `.heatbox-form-footer` > `div` + `div` | Save on the left, reset on the right, below the boxes |
 | `.heatbox-notice` (`.is-shown`, `.is-success`, `.is-error`, `role="status"`) | Save message next to the save button in the form footer |

@@ -382,6 +382,10 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 						</p>
 						<p><a href="#" class="button is-destructive">Destructive</a></p>
 						<p><a href="#" class="button button-full">Full width</a></p>
+						<p>
+							<label class="screen-reader-text" for="heatbox-demo-file">Select a file</label>
+							<input type="file" id="heatbox-demo-file">
+						</p>
 					</div>
 				</div>
 

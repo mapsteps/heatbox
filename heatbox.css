@@ -853,6 +853,48 @@ body {
 	border-radius: var(--heatbox-radius-small);
 }
 
+/* File picker: a field with a button like the others (the browser's "No file chosen" text stays) */
+.heatbox-wrap input[type="file"] {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: var(--heatbox-control-height);
+	padding: 3px;
+	font-size: 13px;
+	color: var(--heatbox-text-muted);
+	background: var(--heatbox-surface);
+	border: 1px solid var(--heatbox-border);
+	border-radius: var(--heatbox-radius-control);
+	cursor: pointer;
+	transition: border-color var(--heatbox-transition);
+}
+
+.heatbox-wrap input[type="file"]:hover {
+	border-color: var(--heatbox-accent);
+}
+
+.heatbox-wrap input[type="file"]:focus-visible {
+	border-color: var(--heatbox-accent);
+	outline: 1px solid var(--heatbox-accent);
+}
+
+.heatbox-wrap input[type="file"]::file-selector-button {
+	min-height: 32px;
+	margin-inline-end: 12px;
+	padding: 0 14px;
+	font: inherit;
+	font-weight: 500;
+	color: var(--heatbox-accent);
+	background: var(--heatbox-accent-soft);
+	border: 1px solid var(--heatbox-accent-soft-border);
+	border-radius: var(--heatbox-radius-small);
+	cursor: pointer;
+	transition: background-color var(--heatbox-transition), border-color var(--heatbox-transition);
+}
+
+.heatbox-wrap input[type="file"]:hover::file-selector-button {
+	border-color: var(--heatbox-accent);
+}
+
 .heatbox-wrap .button-full {
 	width: 100%;
 	text-align: center;
