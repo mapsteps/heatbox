@@ -66,6 +66,7 @@ body {
 	--heatbox-radius-control: 8px;
 	--heatbox-radius-small: 4px;
 	--heatbox-control-height: 40px;
+	--heatbox-label-offset: 9px; /* Pushes a row label down to the middle of its field */
 	--heatbox-transition: 0.2s ease-in-out;
 }
 
@@ -503,8 +504,10 @@ body {
 /* 7. Settings & form controls
    ========================================================================== */
 
+/* The bottom margin matches the label offset, so the space below the last row
+   equals the space above the first label (works with hidden rows too). */
 .heatbox .form-table {
-	margin: 0;
+	margin: 0 0 var(--heatbox-label-offset);
 }
 
 .heatbox .form-table th,
@@ -521,21 +524,7 @@ body {
    A wider label column keeps descriptions from wrapping into tall rows. */
 .heatbox .form-table th {
 	width: 240px;
-	padding-top: 25px;
-}
-
-/* First label and last row sit one box padding from the box edges */
-.heatbox .form-table tr:first-child th {
-	padding-top: var(--heatbox-box-padding);
-}
-
-.heatbox .form-table tr:first-child td {
-	padding-top: calc(var(--heatbox-box-padding) - 9px);
-}
-
-.heatbox .form-table tr:last-child th,
-.heatbox .form-table tr:last-child td {
-	padding-bottom: var(--heatbox-box-padding);
+	padding-top: calc(16px + var(--heatbox-label-offset));
 }
 
 /* Toggles line up with the row label */
@@ -554,6 +543,11 @@ body {
 }
 
 @media screen and (max-width: 782px) {
+	/* Labels sit above their field here, so no offset is needed */
+	.heatbox .form-table {
+		margin-bottom: 0;
+	}
+
 	.heatbox .form-table th {
 		width: auto;
 		padding-top: 16px;
@@ -562,22 +556,6 @@ body {
 
 	.heatbox .form-table td {
 		padding: 8px var(--heatbox-box-padding) 16px;
-	}
-
-	.heatbox .form-table tr:first-child th {
-		padding-top: var(--heatbox-box-padding);
-	}
-
-	.heatbox .form-table tr:first-child td {
-		padding-top: 8px;
-	}
-
-	.heatbox .form-table tr:last-child th {
-		padding-bottom: 0;
-	}
-
-	.heatbox .form-table tr:last-child td {
-		padding-bottom: var(--heatbox-box-padding);
 	}
 }
 
