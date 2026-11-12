@@ -416,13 +416,12 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 					<h2>Badges <span class="heatbox-badge">PRO</span></h2>
 					<div class="heatbox-content">
 						<p>
-							<span class="heatbox-badge is-info">Active</span>
-							<span class="heatbox-badge is-success">Connected</span>
+							<span class="heatbox-badge is-success">Active</span>
 							<span class="heatbox-badge is-warning">Expires soon</span>
 							<span class="heatbox-badge is-error">Failed</span>
 							<span class="heatbox-badge is-neutral">Inactive</span>
 						</p>
-						<p class="description">Add <code>.is-info</code>, <code>.is-success</code>, <code>.is-warning</code>, <code>.is-error</code> or <code>.is-neutral</code> to <code>.heatbox-badge</code>.</p>
+						<p class="description">Add <code>.is-success</code>, <code>.is-warning</code>, <code>.is-error</code> or <code>.is-neutral</code> to <code>.heatbox-badge</code>.</p>
 					</div>
 				</div>
 
