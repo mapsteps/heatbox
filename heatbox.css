@@ -524,6 +524,20 @@ body {
 	padding-top: 25px;
 }
 
+/* First label and last row sit one box padding from the box edges */
+.heatbox .form-table tr:first-child th {
+	padding-top: var(--heatbox-box-padding);
+}
+
+.heatbox .form-table tr:first-child td {
+	padding-top: calc(var(--heatbox-box-padding) - 9px);
+}
+
+.heatbox .form-table tr:last-child th,
+.heatbox .form-table tr:last-child td {
+	padding-bottom: var(--heatbox-box-padding);
+}
+
 /* Toggles line up with the row label */
 .heatbox .form-table td > .toggle-switch {
 	margin-top: 10px;
@@ -548,6 +562,22 @@ body {
 
 	.heatbox .form-table td {
 		padding: 8px var(--heatbox-box-padding) 16px;
+	}
+
+	.heatbox .form-table tr:first-child th {
+		padding-top: var(--heatbox-box-padding);
+	}
+
+	.heatbox .form-table tr:first-child td {
+		padding-top: 8px;
+	}
+
+	.heatbox .form-table tr:last-child th {
+		padding-bottom: 0;
+	}
+
+	.heatbox .form-table tr:last-child td {
+		padding-bottom: var(--heatbox-box-padding);
 	}
 }
 
