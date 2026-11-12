@@ -64,6 +64,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | `.label.checkbox-label` / `.label.radio-label` + `.indicator` | Checkbox / radio |
 | `.toggle-switch` > `input` + `.switch-track` > `.switch-thumb` | Toggle |
 | `input.small-text` + `span.heatbox-unit` | Small number field with a unit, e.g. `px` |
+| `.heatbox-input-group` > `span.heatbox-input-prefix` + `input` | Field with a prefix joined to it, e.g. the site address in front of a slug |
 | WP's `wp-color-picker` (with or without the alpha add-on) | Color field, styled like the inputs; nothing extra to add |
 | `.button.is-loading`, `.button-larger`, `.button-full`, `.button.is-destructive`, `.button > .dashicons` | Button modifiers (`.is-destructive`: red outline, e.g. Reset) |
 | `input[type="file"]` | File picker styled like a field with a button, no class needed |

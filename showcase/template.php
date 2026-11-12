@@ -354,6 +354,18 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 						</tr>
 						<tr>
 							<th scope="row">
+								<label for="heatbox-demo-slug">Login URL</label>
+								<p class="description">Uses <code>.heatbox-input-group</code> + <code>.heatbox-input-prefix</code>.</p>
+							</th>
+							<td>
+								<div class="heatbox-input-group">
+									<span class="heatbox-input-prefix" title="https://example.com/">https://example.com/</span>
+									<input type="text" id="heatbox-demo-slug" placeholder="login">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
 								<label for="heatbox-demo-color">Color picker</label>
 								<p class="description">WP's <code>wp-color-picker</code>.</p>
 							</th>
