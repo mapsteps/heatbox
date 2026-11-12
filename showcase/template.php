@@ -111,6 +111,28 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 					</div>
 				</div>
 
+				<!-- Three boxes per row -->
+				<div class="heatbox-columns is-three">
+					<div class="heatbox">
+						<h2>Login</h2>
+						<div class="heatbox-content">
+							<p class="description">Three per row: <code>.heatbox-columns.is-three</code>.</p>
+						</div>
+					</div>
+					<div class="heatbox">
+						<h2>Menu</h2>
+						<div class="heatbox-content">
+							<p class="description">Two per row on medium screens.</p>
+						</div>
+					</div>
+					<div class="heatbox">
+						<h2>Toolbar</h2>
+						<div class="heatbox-content">
+							<p class="description">One per row on small screens.</p>
+						</div>
+					</div>
+				</div>
+
 				<!-- Feature list + attached container holding free content -->
 				<div class="heatbox">
 					<h2>Go PRO <span class="heatbox-badge">PRO</span></h2>
