@@ -509,7 +509,7 @@ body {
 
 .heatbox .form-table th,
 .heatbox .form-table td {
-	padding: 24px var(--heatbox-box-padding);
+	padding: 16px var(--heatbox-box-padding);
 	vertical-align: top;
 }
 
@@ -517,9 +517,11 @@ body {
 	padding-inline-start: 0;
 }
 
-/* Labels line up with the middle of a field */
+/* Labels line up with the middle of a field.
+   A wider label column keeps descriptions from wrapping into tall rows. */
 .heatbox .form-table th {
-	padding-top: 33px;
+	width: 240px;
+	padding-top: 25px;
 }
 
 /* Toggles line up with the row label */
@@ -539,17 +541,18 @@ body {
 
 @media screen and (max-width: 782px) {
 	.heatbox .form-table th {
-		padding-top: 24px;
+		width: auto;
+		padding-top: 16px;
 		padding-bottom: 0;
 	}
 
 	.heatbox .form-table td {
-		padding: 10px var(--heatbox-box-padding) 24px;
+		padding: 8px var(--heatbox-box-padding) 16px;
 	}
 }
 
 .heatbox .form-table th .description {
-	margin-top: 10px;
+	margin: 6px 0 0;
 }
 
 .heatbox .setting-fields .setting-field {
