@@ -634,6 +634,7 @@ body {
 .heatbox input[type="password"],
 .heatbox input[type="search"],
 .heatbox input[type="tel"],
+.heatbox input[type="datetime-local"],
 .heatbox select,
 .heatbox textarea {
 	min-height: var(--heatbox-control-height);
@@ -662,6 +663,7 @@ body {
 .heatbox input[type="password"]:hover,
 .heatbox input[type="search"]:hover,
 .heatbox input[type="tel"]:hover,
+.heatbox input[type="datetime-local"]:hover,
 .heatbox select:hover,
 .heatbox textarea:hover {
 	border-color: var(--heatbox-control-border);
@@ -674,6 +676,7 @@ body {
 .heatbox input[type="password"]:focus,
 .heatbox input[type="search"]:focus,
 .heatbox input[type="tel"]:focus,
+.heatbox input[type="datetime-local"]:focus,
 .heatbox select:focus,
 .heatbox textarea:focus {
 	border-color: var(--heatbox-accent);
