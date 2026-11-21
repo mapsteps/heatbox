@@ -66,7 +66,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | `.toggle-switch` > `input` + `.switch-track` > `.switch-thumb` | Toggle |
 | `input.small-text` + `span.heatbox-unit` | Small number field with a unit, e.g. `px` |
 | `.heatbox-input-group` > `span.heatbox-input-prefix` + `input` | Field with a prefix joined to it, e.g. the site address in front of a slug |
-| `.heatbox-repeater` > `.heatbox-repeater-item` > (`.heatbox-repeater-label`) + `.heatbox-repeater-fields` + `button.heatbox-remove-button` | Rows to add and remove; every row's fields get the same width, so the remove buttons line up. The page's script adds and removes rows |
+| `.heatbox-repeater` > `.heatbox-repeater-item` > (`.heatbox-repeater-label`) + `.heatbox-repeater-fields` + `button.heatbox-remove-button` | Rows to add and remove; every row's fields get the same width (480px, or the box's with `.is-wide`), so the remove buttons line up; fields share the row, a `.heatbox-repeater-separator` (e.g. →) goes between them and is left out on phones. The page's script adds and removes rows |
 | WP's `wp-color-picker` (with or without the alpha add-on) | Color field, styled like the inputs; nothing extra to add |
 | `.button.is-loading`, `.button-larger`, `.button-full`, `.button.is-destructive`, `.button > .dashicons` | Button modifiers (`.is-destructive`: red outline, e.g. Reset) |
 | `input[type="file"]` | File picker styled like a field with a button, no class needed |
