@@ -505,16 +505,16 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 				<div class="heatbox tags-heatbox">
 					<h2>
 						Placeholder tags
-						<span class="action-status">Copied!</span>
+						<span class="action-status" aria-live="polite">Copied!</span>
 					</h2>
 					<div class="heatbox-content">
 						<p class="description">Click a tag to copy it.</p>
 						<div class="tags-wrapper">
-							<code>{site_name}</code>
-							<code>{site_url}</code>
-							<code>{user_login}</code>
-							<code>{user_email}</code>
-							<code>{first_name}</code>
+							<code tabindex="0" role="button">{site_name}</code>
+							<code tabindex="0" role="button">{site_url}</code>
+							<code tabindex="0" role="button">{user_login}</code>
+							<code tabindex="0" role="button">{user_email}</code>
+							<code tabindex="0" role="button">{first_name}</code>
 						</div>
 					</div>
 				</div>

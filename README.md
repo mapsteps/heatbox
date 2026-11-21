@@ -74,7 +74,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | `.heatbox-form-footer` > `div` + `div` | Save on the left, reset on the right, below the boxes |
 | `.heatbox-notice` (`.is-shown`, `.is-success`, `.is-error`, `role="status"`) | Save message next to the save button in the form footer |
 | `.heatbox-status-indicator` (`.is-loading`, `.is-done`) | Save status inside a box title (for settings saved per box) |
-| `.tags-heatbox`, `.tags-wrapper code` | Copyable tags |
+| `.tags-heatbox` > `h2` > `.action-status` (`.is-shown`) + `.tags-wrapper` > `code` | Copyable tags, e.g. placeholders or short shortcodes: click a tag to copy it, the box title shows "Copied!". Give each `code` `tabindex="0" role="button"` so the keyboard reaches it (your script copies on Enter / Space too). Several `.tags-wrapper` (each under its own text) are spaced like paragraphs |
 | `ol.heatbox-steps` > `li` | Numbered steps |
 | `.heatbox-copy` > `code` + `.button` (`.is-copied`) | Code snippet with a copy button, spaced like a paragraph when more follows. Your script copies the code and adds `.is-copied` |
 | `.heatbox-tooltip` > `.tooltip-content` (`.has-image`) | Tooltip |

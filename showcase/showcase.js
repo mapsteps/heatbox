@@ -61,12 +61,20 @@
 		var status = box.querySelector('.action-status');
 
 		box.querySelectorAll('.tags-wrapper code').forEach(function (tag) {
-			tag.addEventListener('click', function () {
+			function copy() {
 				if (navigator.clipboard) navigator.clipboard.writeText(tag.textContent);
 				status.classList.add('is-shown');
 				setTimeout(function () {
 					status.classList.remove('is-shown');
 				}, 1200);
+			}
+			tag.addEventListener('click', copy);
+			// Tags have role="button": Enter and Space copy too.
+			tag.addEventListener('keydown', function (event) {
+				if ('Enter' === event.key || ' ' === event.key) {
+					event.preventDefault();
+					copy();
+				}
 			});
 		});
 	});

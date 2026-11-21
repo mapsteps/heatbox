@@ -1444,6 +1444,11 @@ body {
 	gap: 8px;
 }
 
+/* Several groups of tags, each under its own explanation: a paragraph's space below each */
+.tags-heatbox .tags-wrapper:not(:last-child) {
+	margin-bottom: var(--heatbox-gap);
+}
+
 .tags-heatbox .heatbox-content p:last-child {
 	margin-bottom: 0;
 }
@@ -1461,10 +1466,17 @@ body {
 	transition: border-color var(--heatbox-transition), color var(--heatbox-transition), background-color var(--heatbox-transition);
 }
 
-.heatbox .tags-wrapper code:hover {
+.heatbox .tags-wrapper code:hover,
+.heatbox .tags-wrapper code:focus-visible {
 	color: var(--heatbox-accent);
 	background-color: var(--heatbox-accent-soft);
 	border-color: var(--heatbox-accent-soft-border);
+}
+
+/* Tags reached with the keyboard (tabindex="0" role="button") */
+.heatbox .tags-wrapper code:focus-visible {
+	outline: 2px solid var(--heatbox-accent);
+	outline-offset: 2px;
 }
 
 .tags-heatbox .action-status {
