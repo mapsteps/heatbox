@@ -388,6 +388,35 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 						</tr>
 						<tr>
 							<th scope="row">
+								Rows to add and remove
+								<p class="description">Uses <code>.heatbox-repeater</code> &gt; <code>.heatbox-repeater-item</code> (optional <code>.heatbox-repeater-label</code>, <code>.heatbox-repeater-fields</code>, <code>.heatbox-remove-button</code>). The page's own script adds and removes rows.</p>
+							</th>
+							<td>
+								<div class="heatbox-repeater">
+									<div class="heatbox-repeater-item">
+										<label class="heatbox-repeater-label" for="heatbox-demo-repeat-1">Administrator</label>
+										<div class="heatbox-repeater-fields">
+											<div class="heatbox-input-group">
+												<span class="heatbox-input-prefix" title="https://example.com/">https://example.com/</span>
+												<input type="text" id="heatbox-demo-repeat-1" value="wp-admin/">
+											</div>
+										</div>
+										<button type="button" class="heatbox-remove-button"><span class="dashicons dashicons-no-alt" aria-hidden="true"></span><span class="screen-reader-text">Remove Administrator</span></button>
+									</div>
+									<div class="heatbox-repeater-item">
+										<div class="heatbox-repeater-fields">
+											<input type="text" class="code" value="111311793" aria-label="Code">
+											&rarr;
+											<select aria-label="Group"><option>Setup Wizard</option></select>
+										</div>
+										<button type="button" class="heatbox-remove-button"><span class="dashicons dashicons-no-alt" aria-hidden="true"></span><span class="screen-reader-text">Remove this code</span></button>
+									</div>
+								</div>
+								<button type="button" class="button">Add a row</button>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
 								<label for="heatbox-demo-color">Color picker</label>
 								<p class="description">WP's <code>wp-color-picker</code>.</p>
 							</th>
