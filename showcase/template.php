@@ -23,7 +23,7 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 						Heatbox
 						<span class="version"><?php echo esc_html( HEATBOX_VERSION ); ?></span>
 					</h1>
-					<p class="subtitle">The shared admin UI for Mapsteps plugins.</p>
+					<p class="subtitle">The shared admin UI for Mapsteps plugins. <a href="<?php echo esc_url( admin_url( 'plugins.php' ) ); ?>">All plugins</a></p>
 				</div>
 				<div>
 					<img src="<?php echo esc_url( $heatbox_img . 'logo.svg' ); ?>" alt="">
@@ -531,6 +531,7 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 									<code>[my-shortcode id="42"]</code>
 									<button type="button" class="button heatbox-demo-copy">Copy</button>
 								</div>
+								<p class="description">Works in widgets and theme templates too.</p>
 							</li>
 							<li>
 								<h3>Save and preview</h3>

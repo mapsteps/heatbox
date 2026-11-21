@@ -49,7 +49,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 |---|---|
 | `.heatbox-wrap` | Page wrapper |
 | `hr.wp-header-end` | WordPress' marker: admin notices are moved right after it. Put it at the top of `.heatbox-main` |
-| `.heatbox-header` (`.heatbox-has-tab-nav`), `.logo-container`, `h1.title`, `.subtitle`, `.version` | Page header. Use an `h1` for the title: the page needs one |
+| `.heatbox-header` (`.heatbox-has-tab-nav`), `.logo-container`, `h1.title`, `.subtitle`, `.version` | Page header. Use an `h1` for the title: the page needs one. The logo is optional; without it the title and subtitle wrap on phones. A link in the subtitle (e.g. back to an overview) is accent-colored, underlined on hover |
 | `.heatbox-tab-nav` (`li.active`) | Tabs in the header. Give each tab and its `.heatbox-admin-panel` the same `data-panel="name"`; your JS shows the matching panel (see `showcase/showcase.js`) |
 | `.heatbox-admin-panel` | Tab panel, hidden until your JS shows it |
 | `.heatbox-container` (`-wide`, `-center`) | Max-width container |
@@ -61,7 +61,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | `.heatbox-badge` (`.is-info`, `.is-success`, `.is-warning`, `.is-error`, `.is-neutral`) | Pill badge, e.g. PRO next to a title, or a status like Active / Failed |
 | `.heatbox-features` > `li` > `.dashicons` + `div` | Two-column feature list with check marks |
 | `.heatbox .form-table`, `.setting-fields` > `.setting-field` | Settings (text fields, selects & textareas inside a box are styled too) |
-| `.label.checkbox-label` / `.label.radio-label` + `.indicator` | Checkbox / radio |
+| `.label.checkbox-label` / `.label.radio-label` + `.indicator` | Checkbox / radio. In a `.form-table` cell, the first one (or the first of a `.setting-fields` / `.choice-list`) lines up with the row label |
 | `.choice-list` (`role="radiogroup"` for radios) > `.label` | Checkboxes / radios below each other, for longer labels |
 | `.toggle-switch` > `input` + `.switch-track` > `.switch-thumb` | Toggle |
 | `input.small-text` + `span.heatbox-unit` | Small number field with a unit, e.g. `px` |
@@ -76,7 +76,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | `.heatbox-status-indicator` (`.is-loading`, `.is-done`) | Save status inside a box title (for settings saved per box) |
 | `.tags-heatbox`, `.tags-wrapper code` | Copyable tags |
 | `ol.heatbox-steps` > `li` | Numbered steps |
-| `.heatbox-copy` > `code` + `.button` (`.is-copied`) | Code snippet with a copy button |
+| `.heatbox-copy` > `code` + `.button` (`.is-copied`) | Code snippet with a copy button, spaced like a paragraph when more follows. Your script copies the code and adds `.is-copied` |
 | `.heatbox-tooltip` > `.tooltip-content` (`.has-image`) | Tooltip |
 | `.heatbox-products` > `h2` + `ul.products` > `li.heatbox` + `.credit` | "Our other products" section below the settings (`.featured-products` still works) |
 | Sidebar review box: `.heatbox` > `h2` "Leave a review" + `.heatbox-content` > `p.description` + `a.button` | No extra CSS. Add `<span class="screen-reader-text"> (opens in a new tab)</span>` to links with `target="_blank"` |
