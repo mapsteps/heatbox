@@ -327,6 +327,28 @@ $heatbox_img = HEATBOX_URL . 'showcase/';
 							</td>
 						</tr>
 						<tr>
+							<th scope="row" id="heatbox-demo-choice-list">Radio buttons below each other</th>
+							<td>
+								<div class="choice-list" role="radiogroup" aria-labelledby="heatbox-demo-choice-list">
+									<label class="label radio-label">
+										A longer option that explains what it does
+										<input type="radio" name="heatbox_demo_choice" checked>
+										<div class="indicator"></div>
+									</label>
+									<label class="label radio-label">
+										Another longer option, with a note in brackets (like this)
+										<input type="radio" name="heatbox_demo_choice">
+										<div class="indicator"></div>
+									</label>
+									<label class="label radio-label">
+										A third one
+										<input type="radio" name="heatbox_demo_choice">
+										<div class="indicator"></div>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
 							<th scope="row">Toggle switches</th>
 							<td>
 								<div class="setting-fields">

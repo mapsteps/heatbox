@@ -62,6 +62,7 @@ Boxes use `--heatbox-radius`, `--heatbox-box-border`, `--heatbox-box-padding` an
 | `.heatbox-features` > `li` > `.dashicons` + `div` | Two-column feature list with check marks |
 | `.heatbox .form-table`, `.setting-fields` > `.setting-field` | Settings (text fields, selects & textareas inside a box are styled too) |
 | `.label.checkbox-label` / `.label.radio-label` + `.indicator` | Checkbox / radio |
+| `.choice-list` (`role="radiogroup"` for radios) > `.label` | Checkboxes / radios below each other, for longer labels |
 | `.toggle-switch` > `input` + `.switch-track` > `.switch-thumb` | Toggle |
 | `input.small-text` + `span.heatbox-unit` | Small number field with a unit, e.g. `px` |
 | `.heatbox-input-group` > `span.heatbox-input-prefix` + `input` | Field with a prefix joined to it, e.g. the site address in front of a slug |
